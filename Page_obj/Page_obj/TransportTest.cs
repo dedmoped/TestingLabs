@@ -20,7 +20,7 @@ namespace Page_obj
             Browser.Navigate().GoToUrl("https://www.tutu.ru/");
             HomePage homePage = new HomePage(Browser).InpuntInformation("Гродно","","30.11.2019");
             Assert.AreEqual("Пожалуйста, укажите название станции",homePage.GetError());
-           // Browser.Quit();
+           Browser.Quit();
         }
         [TestMethod]
         public void TestNumberOfPeople()
@@ -32,7 +32,7 @@ namespace Page_obj
             ChangeWindow(Browser);
             TakePlace takePlace = new TakePlace(Browser).ChoosePlace();
             Assert.AreEqual("Вы не выбрали ни одного пассажира", homePage.GetError());
-            // Browser.Quit();
+            Browser.Quit();
         }
         
         private void ChangeWindow(IWebDriver Browser)
