@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using Framework.Driver;
+﻿using NUnit.Framework;
 using Framework.Pages;
 using Framework.Services;
 using Framework.Tests;
 
 namespace Framework
 {
-    
     class TransportTest: TestConfig
     {
         [Test]
@@ -29,8 +22,5 @@ namespace Framework
             TakePlace homePage = new HomePage(Browser).InpuntInformationAndMoveTo(CreateWay.GetPeopleNumberInfo()).Takefirst().ChoosePlace(); 
             Assert.AreEqual("Вы не выбрали ни одного пассажира", homePage.GetError());
         }
-        
-       
     }
-
 }

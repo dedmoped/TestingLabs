@@ -10,7 +10,6 @@ namespace Framework.Services
         {
             get
             {
-
                 string file = "dev";
                 int index = AppDomain.CurrentDomain.BaseDirectory.IndexOf("bin", StringComparison.Ordinal);
                 var configeMap = new ExeConfigurationFileMap

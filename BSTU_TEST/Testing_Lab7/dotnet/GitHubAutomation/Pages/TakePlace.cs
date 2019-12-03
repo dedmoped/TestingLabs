@@ -18,24 +18,19 @@ namespace Framework.Pages
         [FindsBy(How = How.ClassName, Using = "alert_title")]
         private IWebElement Error;
 
-
         public TakePlace(IWebDriver Browser)
         {
             PageFactory.InitElements(Browser, this);
-            
         }
         public TakePlace ChoosePlace()
         {
             People.Click();
             PeopleNumber.Click();
-
-
             return this;
         }
         public string GetError()
         {
             return Error.Text;
         }
-
     }
 }

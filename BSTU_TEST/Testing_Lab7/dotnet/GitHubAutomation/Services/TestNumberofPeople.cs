@@ -13,7 +13,6 @@ namespace GitHubAutomation.Services
         {
             get
             {
-
                 string file = "People_number";
                 int index = AppDomain.CurrentDomain.BaseDirectory.IndexOf("bin", StringComparison.Ordinal);
                 var configeMap = new ExeConfigurationFileMap
